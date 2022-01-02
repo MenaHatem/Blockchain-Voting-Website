@@ -1,0 +1,116 @@
+<html>
+
+    <head>
+
+        <title>Register</title>
+        <link rel="icon" href="icon.ico">
+
+        <style>
+
+            .box {
+
+                margin: 30px 10px;
+
+            }
+            
+            .form-box {
+
+                background-color: 161853;
+                height: 500px;
+                margin: 6% auto;
+                padding: 5px;
+                position: relative;
+                width: 380px;
+
+            }
+
+            .input-field {
+
+                border: 0;
+                margin: 10px;
+                outline: none;
+                padding: 10px;
+                width: 100%;
+
+            }
+
+            .input-group {
+
+                position: absolute;
+                top: 140px;
+                width: 280px;
+
+            }
+
+            .submit-btn {
+
+                border: 0;
+                border-radius: 30px;
+                cursor: pointer;
+                display: block;
+                margin: auto;
+                outline: none;
+                padding: 10px;
+                width: 85%;
+
+            }
+
+            #header {
+
+                color: white;
+                font-size: 20px;
+                left: 40px;
+                position: absolute;
+                top: 50px;
+
+            }
+
+            #register {
+
+                left: 50px;
+
+            }
+
+            #terms {
+
+                bottom: 62px;
+                color: white;
+                font-size: 16px;
+                position: absolute;
+
+            }
+
+            body {
+
+                background-color: EC255A;
+                font-family: "Gill Sans", sans-serif;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class=form-box>
+
+            <h2><span id="header">Please register to be able to vote</span></h2>
+
+            <form action="{{url_for('register')}}" id="register" class="input-group" method="POST">
+
+                <input name="username" type="text" class="input-field" placeholder="Username" required>
+                <input name="email" type="email" class="input-field" placeholder="Email" required>
+                <input type="checkbox" class="box" required><span id="terms">I agree to terms & conditions</span>
+                <button type="submit" class="submit-btn">Register</button>
+
+            </form>
+
+        </div>
+
+    </body>
+
+</html>
