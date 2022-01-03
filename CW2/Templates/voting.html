@@ -1,0 +1,165 @@
+<html>
+
+    <head>
+
+        <title>VOTE NOW</title>
+        <link rel="icon" href="https://raw.githubusercontent.com/MenaHatem/Blockchain-Voting-Website/MenaHatem-website-photos/icon.ico">
+
+        <style>
+
+            .singers {
+
+                background-color: 161853;
+                color: FAEDF0;
+                display: inline-block;
+                margin: 0 3% 0 5%;
+                padding: 2%;
+                width: 20%;
+
+            }
+
+            body {
+
+                background-color: EC255A;
+                color: 161853;
+                font-family: "Gill Sans", sans-serif;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+
+            }
+
+            button {
+
+                background-color: 161853;
+                border: 0;
+                border-radius: 30px;
+                color: white;
+                cursor: pointer;
+                display: block;
+                margin: 20px auto;
+                padding: 20px;
+                width: 100px;
+
+            }
+
+            form {
+
+                background-color: 7CD1B8;
+                color: 161853;
+                margin: 30px 37.1%;
+                padding: 30px 2%;
+                width: 20%;
+
+            }
+
+            h1 {
+
+                font-style: italic;
+                padding: 3% 0 5% 0;
+                text-align: center;
+                text-decoration: underline;
+
+            }
+
+            img {
+
+                padding: 20px 10%;
+                width: 80%;
+
+            }
+
+            input {
+
+                height: 40px;
+                margin: 10px 0 0 10%;
+                width: 80%;
+
+            }
+
+            ul {
+
+                padding-left: 70px;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>🎤 CHOOSE YOUR FAVORITE SINGER FOR 2021 🎤</h1>
+
+        <div>
+
+            <div class=singers>
+
+                <img src="https://github.com/MenaHatem/Blockchain-Voting-Website/blob/MenaHatem-website-photos/singer_1.png?raw=true" alt="The Weeknd">
+                <span class=title><h3>The Weeknd</h3></span>
+                <h4>Greatest Hits:</h4>
+                <ul>
+
+                    <h4>Starboy</h4>
+                    <h4>In Your Eyes</h4>
+                    <h4>Save Your Tears</h4>
+
+                </ul>
+
+            </div>
+
+            <div class=singers>
+
+                <img src="https://github.com/MenaHatem/Blockchain-Voting-Website/blob/MenaHatem-website-photos/singer_2.png?raw=true" alt="Halsey">
+                <span><h3>Halsey</h3></span>
+                <h4>Greatest Hits:</h4>
+                <ul>
+
+                    <h4>Sorry</h4>
+                    <h4>Now or Never</h4>
+                    <h4>Beautiful Stranger</h4>
+
+                </ul>
+                
+            </div>
+
+            <div class=singers>
+
+                <img src="https://github.com/MenaHatem/Blockchain-Voting-Website/blob/MenaHatem-website-photos/singer_3.png?raw=true" alt="Arctic Monkeys">
+                <span><h3>Arctic Monkeys</h3></span>
+                <h4>Greatest Hits:</h4>
+                <ul>
+
+                    <h4>505</h4>
+                    <h4>R U Mine?</h4>
+                    <h4>Do I Wanna Know?</h4>
+
+                </ul>
+                
+            </div>
+
+        </div>
+
+        <div>
+
+            <form action="{{url_for('voting')}}" method="POST">
+
+                <input name="username" type="text" placeholder="Username" required>
+                <input name="email" type="email" placeholder="Email" required>
+                <input name="vote" type="text" placeholder="Your Vote" required>
+                
+                <!-- <select name="vote">
+                    <option value="singer_1">The Weeknd</option>
+                    <option value="singer_2">Halsey</option>   
+                    <option value="singer_3">Arctic Monkeys</option>      
+                </select> -->
+
+                <button type="submit">Submit</button>
+
+            </form>
+
+        </div>
+
+    </body>
+
+</html>
